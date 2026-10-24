@@ -1,0 +1,57 @@
+@startuml
+!pragma layout smetana
+skinparam dpi 180
+skinparam defaultFontName Arial
+skinparam defaultFontSize 13
+skinparam classFontSize 16
+skinparam classAttributeIconSize 0
+skinparam shadowing false
+skinparam monochrome true
+skinparam nodesep 25
+skinparam ranksep 38
+top to bottom direction
+
+class Main <<Client>> {
+  {static} +main(String[]): void
+}
+
+class Calculator <<Context>> {
+  -strategy: OperationStrategy
+  +Calculator(OperationStrategy)
+  +setStrategy(OperationStrategy): void
+  +calculate(double, double): double
+}
+
+interface OperationStrategy <<Strategy>> {
+  +execute(double, double): double
+}
+
+class AddStrategy <<Concrete Strategy>> {
+  +execute(double, double): double
+}
+
+class SubtractStrategy <<Concrete Strategy>> {
+  +execute(double, double): double
+}
+
+class MultiplyStrategy <<Concrete Strategy>> {
+  +execute(double, double): double
+}
+
+class DivideStrategy <<Concrete Strategy>> {
+  +execute(double, double): double
+}
+
+Main ..> Calculator : creates and configures
+Main ..> AddStrategy : creates
+Main ..> SubtractStrategy : creates
+Main ..> MultiplyStrategy : creates
+Calculator --> "1" OperationStrategy : delegates to
+OperationStrategy <|.. AddStrategy
+OperationStrategy <|.. SubtractStrategy
+OperationStrategy <|.. MultiplyStrategy
+OperationStrategy <|.. DivideStrategy
+AddStrategy -[hidden]right- SubtractStrategy
+SubtractStrategy -[hidden]right- MultiplyStrategy
+MultiplyStrategy -[hidden]right- DivideStrategy
+@enduml
