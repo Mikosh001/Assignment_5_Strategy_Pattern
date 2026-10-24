@@ -3,4 +3,5 @@ src/strategy/Calculator.java
 src/strategy/AddStrategy.java
 src/strategy/SubtractStrategy.java
 src/strategy/MultiplyStrategy.java
+src/strategy/DivideStrategy.java
 src/Main.java
