@@ -48,4 +48,4 @@ The result is `4.0`. Division by zero throws `IllegalArgumentException`. Calcula
 
 The required LMS report is [report.md](report.md). [report.pdf](report.pdf) is an A4 reading copy of the same report. PlantUML source and image are in `uml/`.
 
-Reference: [Refactoring.Guru - Strategy](https://refactoring.guru/design-patterns/strategy). OpenAI Codex assisted with code, report preparation, and verification.
+Reference: [Refactoring.Guru - Strategy](https://refactoring.guru/design-patterns/strategy).
