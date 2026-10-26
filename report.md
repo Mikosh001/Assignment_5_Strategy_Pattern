@@ -113,4 +113,3 @@ The same calculator can perform different operations while its calculation metho
 - [1] [Refactoring.Guru: Strategy](https://refactoring.guru/design-patterns/strategy).
 - [2] [Refactoring.Guru: State](https://refactoring.guru/design-patterns/state).
 - [3] [PlantUML: Class diagram](https://plantuml.com/class-diagram).
-- OpenAI Codex assisted with code, report preparation, and verification.
